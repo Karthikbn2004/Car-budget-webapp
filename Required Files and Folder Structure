@@ -1,0 +1,7 @@
+your_project_folder/
+│
+├── app.py                       ← Your Flask code
+├── cars.csv                    ← CSV file with car data
+└── templates/
+    ├── index.html              ← Form to take input
+    └── results.html            ← To display results
