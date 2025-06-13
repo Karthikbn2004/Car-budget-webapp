@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Cars Matching Your Search</h1>
+    {% if cars %}
+        <table border="1">
+            <tr>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Location</th>
+            </tr>
+            {% for car in cars %}
+            <tr>
+                <td>{{ car['Model'] }}</td>
+                <td>{{ car['Price'] }}</td>
+                <td>{{ car['Location'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No cars found within the specified budget and location.</p>
+    {% endif %}
+    <br><a href="/">Search Again</a>
+</body>
+</html>
